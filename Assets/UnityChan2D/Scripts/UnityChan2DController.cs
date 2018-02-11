@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UnityChanController2D : MonoBehaviour {
+public class UnityChan2DController : MonoBehaviour {
 	//アニメーションするためのコンポーネントを入れる
 	Animator animator;
 

@@ -9,6 +9,8 @@ public class CubeController : MonoBehaviour {
 	// 消滅位置
 	private float deadLine = -10;
 
+
+
 	// Use this for initialization
 	void Start(){
 	}
@@ -20,7 +22,12 @@ public class CubeController : MonoBehaviour {
 
 		// 画面外に出たら破棄する
 		if (transform.position.x < this.deadLine){
-			Destroy (gameObject);
-		}
+			Destroy (gameObject);					
+	}
+}
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.name != "UnityChan2D")
+			GetComponent<AudioSource>().Play();
 	}
 }
